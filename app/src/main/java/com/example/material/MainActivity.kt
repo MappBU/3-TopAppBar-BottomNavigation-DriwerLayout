@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
+import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
 import com.example.material.databinding.ActivityMainBinding
 
@@ -56,6 +58,22 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+
+        // Тапаем по итемам Драйвера
+        binding?.apply {
+            nv.setNavigationItemSelectedListener {
+                when (it.itemId) {
+                    R.id.item1 -> Toast.makeText(this@MainActivity, "Item 1", Toast.LENGTH_SHORT)
+                        .show()
+                    R.id.item2 -> Toast.makeText(this@MainActivity, "Item 2", Toast.LENGTH_SHORT)
+                        .show()
+                }
+                // При нажатии на итем менюшки - дополнительно заезжает обратно Вивигатион вью
+                drawer.closeDrawer(GravityCompat.START)
+                true
+            }
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

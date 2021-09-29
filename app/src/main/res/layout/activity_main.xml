@@ -4,7 +4,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    
+
+    <!--
+        Помещаем весь контект Активити, включая все бары в DrawerLayout
+        tools:openDrawer="start" - Драйвер выезжает справа
+     -->
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="start">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -68,5 +78,20 @@
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--
+            Это сам Драйвер Лайоут
+            Подгружаем Хидер и Меню
+        -->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@android:color/holo_orange_dark"
+            app:headerLayout="@layout/header"
+            app:menu="@menu/driwer_menu" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
     
 </layout>
