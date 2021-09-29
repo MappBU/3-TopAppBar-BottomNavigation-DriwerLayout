@@ -1,5 +1,5 @@
-# 1-Bottom-Navigation
+# 2-TopAppBar-BottomNavigation
 
 Как выглядит:
 
-https://i.piccy.info/i9/1d9221f42bcaf05b0135a51346a479bc/1632909583/16342/1443259/Screenshot_2021_09_28_23_30_23_872_com_example_test.jpg
+http://i.piccy.info/i9/ee42e10b83b4a6c3f54a8dbf3094959e/1632937875/20330/1441523/Screenshot_2021_09_29_20_43_47_521_com_example_test.jpg
